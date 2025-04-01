@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 export default function CNC() {
@@ -14,14 +15,19 @@ export default function CNC() {
             href={"https://github.com/Rugsit/CNC_Recruit_Frontend"}
             target="_blank"
           >
-            <img
+            <Image
+              alt="image"
               src="https://cdn-icons-png.flaticon.com/512/25/25231.png"
               className="w-[50px]"
             />
           </Link>
         </div>
         <div className="bg-white rounded-lg flex flex-col mb-8">
-          <img src="/cnc/cnc_4.jpg" className="rounded-tr-lg rounded-tl-lg" />
+          <Image
+            alt="image"
+            src="/cnc/cnc_4.jpg"
+            className="rounded-tr-lg rounded-tl-lg"
+          />
           <div className="p-7 text-black">
             <p className="">
               <span className="font-bold">Description:</span> This project was
@@ -38,27 +44,30 @@ export default function CNC() {
             </ul>
             <p className="font-bold text-2xl mb-6 mt-6">Tech Stack</p>
             <div className="flex gap-3 flex-wrap">
-              <img
+              <Image
+                alt="image"
                 src="https://img.icons8.com/color/512/nextjs.png"
                 className="w-[50px]"
               />
-              <img
+              <Image
+                alt="image"
                 src="https://seeklogo.com/images/T/tailwind-css-logo-5AD4175897-seeklogo.com.png"
                 className="w-[50px]"
               />
-              <img
+              <Image
+                alt="image"
                 src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Postgresql_elephant.svg/640px-Postgresql_elephant.svg.png"
                 className="w-[50px]"
               />
             </div>
             <p className="font-bold text-2xl mb-6 mt-11">Application Image</p>
             <div className="flex flex-col gap-4">
-              <img src="/cnc/cnc_4.jpg" />
-              <img src="/cnc/cnc_5.jpg" />
-              <img src="/cnc/cnc_6.jpg" />
-              <img src="/cnc/cnc_1.jpg" />
-              <img src="/cnc/cnc_2.jpg" />
-              <img src="/cnc/cnc_3.jpg" />
+              <Image alt="image" src="/cnc/cnc_4.jpg" />
+              <Image alt="image" src="/cnc/cnc_5.jpg" />
+              <Image alt="image" src="/cnc/cnc_6.jpg" />
+              <Image alt="image" src="/cnc/cnc_1.jpg" />
+              <Image alt="image" src="/cnc/cnc_2.jpg" />
+              <Image alt="image" src="/cnc/cnc_3.jpg" />
             </div>
           </div>
         </div>

@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
@@ -18,18 +19,19 @@ export default function Home() {
             !isFirstShowHome ? "opacity-0 translate-y-16" : ""
           }`}
         >
-          <img
+          <Image
+            alt="Profile image"
             src="/profile.jpg"
             className="max-w-[300px] w-full object-cover rounded-full mb-10 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 p-2 hover:scale-110 transition-transform"
           />
           <p className="text-3xl font-bold mb-6">
-            Hi, I'm Rugsit Rungrattanachai 👋
+            Hi, I&apos;m Rugsit Rungrattanachai 👋
           </p>
           <p className="text-[16px]">
             A passionate Software Developer with a keen interest in web and
             application development, as well as everything related to software.
-            Currently, I'm pursuing my studies in Computer Science at Kasetsart
-            University, Bangkhen Campus.
+            Currently, I&apos;m pursuing my studies in Computer Science at
+            Kasetsart University, Bangkhen Campus.
           </p>
           <div className="flex gap-3 items-center mt-4 text-[16px] flex-wrap justify-center">
             <p>081-916-9452</p>
@@ -41,7 +43,8 @@ export default function Home() {
                 }
                 target="_blank"
               >
-                <img
+                <Image
+                  alt="Linkin logo"
                   src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/LinkedIn_logo_initials.png/800px-LinkedIn_logo_initials.png"
                   className="w-[30px] h-[30px] rounded-lg"
                 />
@@ -51,7 +54,10 @@ export default function Home() {
                 href={"https://github.com/Rugsit"}
                 target="_blank"
               >
-                <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" />
+                <Image
+                  alt="Github icon image"
+                  src="https://cdn-icons-png.flaticon.com/512/25/25231.png"
+                />
               </Link>
             </div>
           </div>

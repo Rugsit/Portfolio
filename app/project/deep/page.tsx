@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 export default function CNC() {
@@ -14,14 +15,19 @@ export default function CNC() {
             href={"https://github.com/Rugsit/The_Deep_Project"}
             target="_blank"
           >
-            <img
+            <Image
+              alt="image"
               src="https://cdn-icons-png.flaticon.com/512/25/25231.png"
               className="w-[50px]"
             />
           </Link>
         </div>
         <div className="bg-white rounded-lg flex flex-col mb-8">
-          <img src="/deep/deep_3.jpg" className="rounded-tr-lg rounded-tl-lg" />
+          <Image
+            alt="image"
+            src="/deep/deep_3.jpg"
+            className="rounded-tr-lg rounded-tl-lg"
+          />
           <div className="p-7 text-black">
             <p className="">
               <span className="font-bold">Description:</span> About TheDeepGame
@@ -38,29 +44,33 @@ export default function CNC() {
             </ul>
             <p className="font-bold text-2xl mb-6 mt-6">Tech Stack</p>
             <div className="flex gap-2 flex-wrap">
-              <img
+              <Image
+                alt="image"
                 src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Vue.js_Logo_2.svg/1184px-Vue.js_Logo_2.svg.png"
                 className="h-[50px]"
               />
-              <img
+              <Image
+                alt="image"
                 src="https://seeklogo.com/images/T/tailwind-css-logo-5AD4175897-seeklogo.com.png"
                 className="h-[50px]"
               />
-              <img
+              <Image
+                alt="image"
                 src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/1200px-Node.js_logo.svg.png"
                 className="h-[50px]"
               />
-              <img
+              <Image
+                alt="image"
                 src="https://www.helenjoscott.com/wp-content/uploads/2022/01/mongodb_standard.png"
                 className="h-[50px]"
               />
             </div>
             <p className="font-bold text-2xl mb-6 mt-11">Application Image</p>
             <div className="flex flex-col gap-4">
-              <img src="/deep/deep_1.jpg" />
-              <img src="/deep/deep_2.jpg" />
-              <img src="/deep/deep_3.jpg" />
-              <img src="/deep/deep_4.jpg" />
+              <Image alt="image" src="/deep/deep_1.jpg" />
+              <Image alt="image" src="/deep/deep_2.jpg" />
+              <Image alt="image" src="/deep/deep_3.jpg" />
+              <Image alt="image" src="/deep/deep_4.jpg" />
             </div>
           </div>
         </div>

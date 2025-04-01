@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 export default function CNC() {
@@ -14,14 +15,19 @@ export default function CNC() {
             href={"https://github.com/Rugsit/Lazy-vim-web-clone"}
             target="_blank"
           >
-            <img
+            <Image
+              alt="image"
               src="https://cdn-icons-png.flaticon.com/512/25/25231.png"
               className="w-[50px]"
             />
           </Link>
         </div>
         <div className="bg-white rounded-lg flex flex-col mb-8">
-          <img src="/lazy.jpg" className="rounded-tr-lg rounded-tl-lg" />
+          <Image
+            alt="image"
+            src="/lazy.jpg"
+            className="rounded-tr-lg rounded-tl-lg"
+          />
           <div className="p-7 text-black">
             <p className="">
               <span className="font-bold">Description:</span> This project is
@@ -39,18 +45,20 @@ export default function CNC() {
             </ul>
             <p className="font-bold text-2xl mb-6 mt-6">Tech Stack</p>
             <div className="flex gap-3 flex-wrap">
-              <img
-                src="https://img.icons8.com/color/512/nextjs.png"
+              <Image
+                alt="image"
+                src="https://Image.icons8.com/color/512/nextjs.png"
                 className="w-[50px]"
               />
-              <img
+              <Image
+                alt="image"
                 src="https://seeklogo.com/images/T/tailwind-css-logo-5AD4175897-seeklogo.com.png"
                 className="w-[50px]"
               />
             </div>
             <p className="font-bold text-2xl mb-6 mt-11">Application Image</p>
             <div className="flex flex-col gap-4">
-              <img src="/lazy.jpg" />
+              <Image alt="image" src="/lazy.jpg" />
             </div>
           </div>
         </div>

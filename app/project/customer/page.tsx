@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 export default function CNC() {
@@ -14,14 +15,16 @@ export default function CNC() {
             href={"https://github.com/Rugsit/Customer-Management-Project"}
             target="_blank"
           >
-            <img
+            <Image
+              alt="image"
               src="https://cdn-icons-png.flaticon.com/512/25/25231.png"
               className="w-[50px]"
             />
           </Link>
         </div>
         <div className="bg-white rounded-lg flex flex-col mb-8">
-          <img
+          <Image
+            alt="image"
             src="/customer/customer_1.jpg"
             className="rounded-tr-lg rounded-tl-lg"
           />
@@ -41,27 +44,31 @@ export default function CNC() {
             </ul>
             <p className="font-bold text-2xl mb-6 mt-6">Tech Stack</p>
             <div className="flex gap-3 items-center flex-wrap">
-              <img
+              <Image
+                alt="image"
                 src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1150px-React-icon.svg.png"
                 className="h-[50px]"
               />
-              <img
+              <Image
+                alt="image"
                 src="https://seeklogo.com/images/T/tailwind-css-logo-5AD4175897-seeklogo.com.png"
                 className="h-[50px]"
               />
-              <img
+              <Image
+                alt="image"
                 src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/1280px-Node.js_logo.svg.png"
                 className="h-[50px]"
               />
-              <img
+              <Image
+                alt="image"
                 src="https://www.svgrepo.com/show/303251/mysql-logo.svg"
                 className="h-[50px]"
               />
             </div>
             <p className="font-bold text-2xl mb-6 mt-11">Application Image</p>
             <div className="flex flex-col gap-4">
-              <img src="/customer/customer_1.jpg" />
-              <img src="/customer/customer_2.jpg" />
+              <Image alt="image" src="/customer/customer_1.jpg" />
+              <Image alt="image" src="/customer/customer_2.jpg" />
             </div>
           </div>
         </div>
