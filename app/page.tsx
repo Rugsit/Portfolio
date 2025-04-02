@@ -20,9 +20,11 @@ export default function Home() {
           }`}
         >
           <Image
+            width={300}
+            height={300}
             alt="Profile image"
             src="/profile.jpg"
-            className="max-w-[300px] w-full object-cover rounded-full mb-10 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 p-2 hover:scale-110 transition-transform"
+            className="object-cover rounded-full mb-10 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 p-2 hover:scale-110 transition-transform"
           />
           <p className="text-3xl font-bold mb-6">
             Hi, I&apos;m Rugsit Rungrattanachai 👋
@@ -44,9 +46,11 @@ export default function Home() {
                 target="_blank"
               >
                 <Image
+                  width={30}
+                  height={30}
                   alt="Linkin logo"
-                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/LinkedIn_logo_initials.png/800px-LinkedIn_logo_initials.png"
-                  className="w-[30px] h-[30px] rounded-lg"
+                  src="/logo_tech/linkin.png"
+                  className="rounded-lg"
                 />
               </Link>
               <Link
@@ -55,8 +59,10 @@ export default function Home() {
                 target="_blank"
               >
                 <Image
+                  width={30}
+                  height={30}
                   alt="Github icon image"
-                  src="https://cdn-icons-png.flaticon.com/512/25/25231.png"
+                  src="/logo_tech/github.png"
                 />
               </Link>
             </div>

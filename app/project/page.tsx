@@ -3,7 +3,110 @@ import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
+export type DataObject = {
+  name: string;
+  github: string;
+  thumbnail: string;
+  description: string;
+  subDescription: string[];
+  techStack: string[];
+  appImagePath: string;
+  appImage: number;
+  typeProject: string;
+};
+
 export default function Project() {
+  const dataList: DataObject[] = [
+    {
+      name: "Pawpocket Project",
+      github: "https://github.com/Rugsit/PawPocket",
+      thumbnail: "/Pawpocket.jpg",
+      description:
+        "This is a mobile application project for pet owners, developed using the Flutter framework. It features pet data management, event recording for pets, and pet sharing within a community.",
+      subDescription: [
+        "A mobile application for pet owners with key features including pet data management, recording important pet activities, and an in-app community where users can share their pets.",
+        "Developed primarily using the Flutter framework, with Firebase Firestore as the database, Firebase Authentication for authentication, and Supabase for storing images.",
+        "A full-stack application covering everything from UI design to app deployment.",
+      ],
+      techStack: ["flutter.png", "firebase.png", "supabase.png"],
+      appImagePath: "/pawpocket",
+      appImage: 9,
+      typeProject: "Mobile Application",
+    },
+    {
+      name: "CNC Recruit Project",
+      github: "https://github.com/Rugsit/CNC_Recruit_Frontend",
+      thumbnail: "/cnc/1.jpg",
+      description:
+        "This project was developed for recruiting members into the CNC lab. It facilitates the application process, registration for interviews, conducting interviews, and candidate selection.",
+      subDescription: [
+        "For the parts I worked on, this website was developed using the Next.js framework and Tailwind CSS for the frontend.",
+        "It supports responsive design.",
+      ],
+      techStack: ["nextjs.png", "tailwind.png", "postgres.png"],
+      appImagePath: "/cnc",
+      appImage: 6,
+      typeProject: "Website Application",
+    },
+    {
+      name: "LazyVim Web Clone Project",
+      github: "https://github.com/Rugsit/Lazy-vim-web-clone",
+      thumbnail: "/lazy/1.jpg",
+      description:
+        "This project is designed to provide practice in utilizing modern frontend frameworks and styling layouts with contemporary tools such as Next.js and Tailwind CSS.",
+      subDescription: [
+        "This project is created for practicing web development and enhancing skills in Next.js, TailwindCSS, Neovim, TypeScript, as well as JavaScript and HTML.",
+        "It supports responsive design.",
+      ],
+      techStack: ["nextjs.png", "tailwind.png"],
+      appImagePath: "/lazy",
+      appImage: 1,
+      typeProject: "Website Application",
+    },
+    {
+      name: "Customer Management Project",
+      github: "https://github.com/Rugsit/Customer-Management-Project",
+      thumbnail: "/customer/1.jpg",
+      description:
+        "This project is designed to simulate a customer management system with four main features: Create, Read, Update, and Delete (CRUD).",
+      subDescription: [
+        "This project is created for practicing web development and enhancing skills in React, TailwindCSS, Neovim, REST APIs, MySQL, Node.js, as well as JavaScript and HTML.This project is created for practicing web development and enhancing skills in React, TailwindCSS, Neovim, REST APIs, MySQL, Node.js, as well as JavaScript and HTML.",
+        "It supports responsive design.",
+      ],
+      techStack: ["nextjs.png", "tailwind.png", "nodejs.png", "mysql.png"],
+      appImagePath: "/customer",
+      appImage: 2,
+      typeProject: "Website Application",
+    },
+    {
+      name: "MyRequestKU Project",
+      github: "https://github.com/Rugsit/MyRequestKU",
+      thumbnail: "/myrequest/1.jpg",
+      description:
+        "The program's primary objective is to facilitate users in managing requests efficiently. It enables users to submit requests and access request-related information easily and conveniently. The system covers all aspects of the request process, from creation to approval or rejection.",
+      subDescription: [""],
+      techStack: ["java.png", "css.png", "javafx.png", "scenebuilder.png"],
+      appImagePath: "/myrequest",
+      appImage: 4,
+      typeProject: "Desktop Application",
+    },
+    {
+      name: "The Deep Project",
+      github: "https://github.com/Rugsit/The_Deep_Project",
+      thumbnail: "/deep/3.jpg",
+      description:
+        " About TheDeepGame is an educational word-guessing game designed to help students learn English vocabulary while having fun. Players must fill in the correct words to earn points and extend their playtime. However, incorrect answers will result in losing both time and points.",
+      subDescription: [
+        "Frontend: Nuxt.js, Vue.js, Tailwind CSS",
+        "Backend: Node.js, Express.js",
+        "Database: MongoDB",
+      ],
+      techStack: ["vue.png", "tailwind.png", "nodejs.png", "mongo.png"],
+      appImagePath: "/deep",
+      appImage: 4,
+      typeProject: "Website Application",
+    },
+  ];
   const [isFirstShowHome, setIsFirstShowHome] = useState(false);
   useEffect(() => {
     setIsFirstShowHome(true);
@@ -19,210 +122,56 @@ export default function Project() {
           Projects 👻
         </p>
         <div className="flex flex-wrap px-14 py-7 justify-center gap-3">
-          <Link href={"/project/pawpocket"}>
-            <div className="max-w-[400px] w-full bg-white rounded-lg cursor-pointer hover:scale-95 transition-transform">
-              <Image
-                alt="Project image"
-                src="/Pawpocket.jpg"
-                className="rounded-tr-lg rounded-tl-lg w-full h-[250px] object-cover"
-              />
-              <div className="p-3">
-                <div className="flex justify-between items-center flex-wrap gap-2">
-                  <p className="text-black">Pawpocker Project</p>
-                  <div className="flex gap-1">
-                    <Image
-                      alt="Logo image"
-                      src="https://cdn.prod.website-files.com/6047a9e35e5dc54ac86ddd90/63018720eab248248ff88ee3_1bd86e15.png"
-                      className="h-[30px] "
-                    />
-                    <Image
-                      alt="Logo image"
-                      src="https://brandeps.com/logo-download/F/Firebase-logo-02.png"
-                      className="h-[30px]"
-                    />
-                    <Image
-                      alt="Logo image"
-                      src="https://elest.io/images/softwares/284/logo.png"
-                      className="h-[30px] "
-                    />
+          {dataList.map((item, index) => {
+            return (
+              <Link
+                href={{
+                  pathname: "/project/eachProject",
+                  query: item,
+                }}
+                key={index}
+              >
+                <div className="max-w-[400px] w-full bg-white rounded-lg cursor-pointer hover:scale-95 transition-transform">
+                  <Image
+                    width={1000}
+                    height={1000}
+                    alt="Project image"
+                    src={item.thumbnail}
+                    className="rounded-tr-lg rounded-tl-lg w-full h-[250px] object-cover"
+                  />
+                  <div className="p-3">
+                    <div className="flex justify-between items-center flex-wrap gap-2">
+                      <p className="text-black">{item.name}</p>
+                      <div className="flex gap-2">
+                        {item.techStack.map((techStackItem, techStackIndex) => {
+                          if (techStackIndex == 3) return;
+                          return (
+                            <img
+                              key={techStackIndex}
+                              src={`/logo_tech/${techStackItem}`}
+                              alt="Logo image"
+                              className="h-[25px]"
+                            />
+                          );
+                        })}
+                      </div>
+                    </div>
+                    <p
+                      className={`py-2 px-4 ${
+                        item.typeProject == "Website Application"
+                          ? "bg-indigo-400"
+                          : item.typeProject == "Desktop Application"
+                          ? "bg-purple-400"
+                          : "bg-blue-400"
+                      } rounded-lg w-fit text-[12px] mt-2`}
+                    >
+                      {item.typeProject}
+                    </p>
                   </div>
                 </div>
-                <p className="py-2 px-4 bg-blue-400 rounded-lg w-fit text-[12px] mt-2">
-                  Mobile Application
-                </p>
-              </div>
-            </div>
-          </Link>
-
-          <Link href={"/project/cnc"}>
-            <div className="max-w-[400px] w-full bg-white rounded-lg cursor-pointer hover:scale-95 transition-transform">
-              <Image
-                alt="Project image"
-                src="/cnc/cnc_4.jpg"
-                className="rounded-tr-lg rounded-tl-lg w-full h-[250px] object-cover"
-              />
-              <div className="p-3">
-                <div className="flex justify-between items-center flex-wrap gap-2">
-                  <p className="text-black">CNC Recruit</p>
-                  <div className="flex gap-1">
-                    <Image
-                      alt="Logo image"
-                      src="https://img.icons8.com/color/512/nextjs.png"
-                      className="w-[30px]"
-                    />
-                    <Image
-                      alt="Logo image"
-                      src="https://seeklogo.com/images/T/tailwind-css-logo-5AD4175897-seeklogo.com.png"
-                      className="w-[30px]"
-                    />
-                    <Image
-                      alt="Logo image"
-                      src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Postgresql_elephant.svg/640px-Postgresql_elephant.svg.png"
-                      className="w-[30px]"
-                    />
-                  </div>
-                </div>
-                <p className="py-2 px-4 bg-indigo-400 rounded-lg w-fit text-[12px] mt-2">
-                  Website Application
-                </p>
-              </div>
-            </div>
-          </Link>
-
-          <Link href={"/project/lazyvimclone"}>
-            <div className="max-w-[400px] w-full bg-white rounded-lg cursor-pointer hover:scale-95 transition-transform">
-              <Image
-                alt="Project image"
-                src="/lazy.jpg"
-                className="rounded-tr-lg rounded-tl-lg w-full h-[250px] object-cover"
-              />
-              <div className="p-3">
-                <div className="flex justify-between items-center flex-wrap gap-2">
-                  <p className="text-black">LazyVim Web Clone Project</p>
-                  <div className="flex gap-1">
-                    <Image
-                      alt="Logo image"
-                      src="https://img.icons8.com/color/512/nextjs.png"
-                      className="w-[30px]"
-                    />
-                    <Image
-                      alt="Logo image"
-                      src="https://seeklogo.com/images/T/tailwind-css-logo-5AD4175897-seeklogo.com.png"
-                      className="w-[30px]"
-                    />
-                  </div>
-                </div>
-                <p className="py-2 px-4 bg-indigo-400 rounded-lg w-fit text-[12px] mt-2">
-                  Website Application
-                </p>
-              </div>
-            </div>
-          </Link>
-
-          <Link href={"/project/customer"}>
-            <div className="max-w-[400px] w-full bg-white rounded-lg cursor-pointer hover:scale-95 transition-transform">
-              <Image
-                alt="Projects image"
-                src="/customer/customer_1.jpg"
-                className="rounded-tr-lg rounded-tl-lg w-full h-[250px] object-cover"
-              />
-              <div className="p-3">
-                <div className="flex justify-between items-center flex-wrap gap-2">
-                  <p className="text-black">Customer Management Project</p>
-                  <div className="flex gap-1">
-                    <Image
-                      alt="Logo image"
-                      src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1150px-React-icon.svg.png"
-                      className="h-[30px]"
-                    />
-                    <Image
-                      alt="Logo image"
-                      src="https://seeklogo.com/images/T/tailwind-css-logo-5AD4175897-seeklogo.com.png"
-                      className="h-[30px]"
-                    />
-                    <Image
-                      alt="Logo image"
-                      src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/1280px-Node.js_logo.svg.png"
-                      className="h-[30px]"
-                    />
-                  </div>
-                </div>
-                <p className="py-2 px-4 bg-indigo-400 rounded-lg w-fit text-[12px] mt-2">
-                  Website Application
-                </p>
-              </div>
-            </div>
-          </Link>
-
-          <Link href={"/project/myrequest"}>
-            <div className="max-w-[400px] w-full bg-white rounded-lg cursor-pointer hover:scale-95 transition-transform">
-              <Image
-                alt="Project image"
-                src="/myrequest/myrequest_1.jpg"
-                className="rounded-tr-lg rounded-tl-lg w-full h-[250px] object-cover"
-              />
-              <div className="p-3">
-                <div className="flex justify-between items-center flex-wrap gap-2">
-                  <p className="text-black">MyRequestKU</p>
-                  <div className="flex gap-3">
-                    <Image
-                      alt="Logo image"
-                      src="https://upload.wikimedia.org/wikipedia/en/thumb/3/30/Java_programming_language_logo.svg/1200px-Java_programming_language_logo.svg.png"
-                      className="h-[30px]"
-                    />
-                    <Image
-                      alt="Logo image"
-                      src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/1452px-CSS3_logo_and_wordmark.svg.png"
-                      className="h-[30px]"
-                    />
-                    <Image
-                      alt="Logo image"
-                      src="https://upload.wikimedia.org/wikipedia/en/c/cc/JavaFX_Logo.png"
-                      className="h-[30px]"
-                    />
-                  </div>
-                </div>
-                <p className="py-2 px-4 bg-orange-400 rounded-lg w-fit text-[12px] mt-2">
-                  Desktop Application
-                </p>
-              </div>
-            </div>
-          </Link>
-
-          <Link href={"/project/deep"}>
-            <div className="max-w-[400px] w-full bg-white rounded-lg cursor-pointer hover:scale-95 transition-transform">
-              <Image
-                alt="Project image"
-                src="/deep/deep_3.jpg"
-                className="rounded-tr-lg rounded-tl-lg w-full h-[250px] object-cover"
-              />
-              <div className="p-3">
-                <div className="flex justify-between items-center flex-wrap gap-2">
-                  <p className="text-black">The Deep Project</p>
-                  <div className="flex gap-1">
-                    <Image
-                      alt="Logo image"
-                      src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Vue.js_Logo_2.svg/1184px-Vue.js_Logo_2.svg.png"
-                      className="h-[30px]"
-                    />
-                    <Image
-                      alt="Logo image"
-                      src="https://seeklogo.com/images/T/tailwind-css-logo-5AD4175897-seeklogo.com.png"
-                      className="h-[30px]"
-                    />
-                    <Image
-                      alt="Logo image"
-                      src="https://www.helenjoscott.com/wp-content/uploads/2022/01/mongodb_standard.png"
-                      className="h-[30px]"
-                    />
-                  </div>
-                </div>
-                <p className="py-2 px-4 bg-indigo-400 rounded-lg w-fit text-[12px] mt-2">
-                  Website Application
-                </p>
-              </div>
-            </div>
-          </Link>
+              </Link>
+            );
+          })}
         </div>
       </div>
     </>
