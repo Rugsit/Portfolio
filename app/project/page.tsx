@@ -73,7 +73,7 @@ export default function Project() {
         "This project is created for practicing web development and enhancing skills in React, TailwindCSS, Neovim, REST APIs, MySQL, Node.js, as well as JavaScript and HTML.This project is created for practicing web development and enhancing skills in React, TailwindCSS, Neovim, REST APIs, MySQL, Node.js, as well as JavaScript and HTML.",
         "It supports responsive design.",
       ],
-      techStack: ["nextjs.png", "tailwind.png", "nodejs.png", "mysql.png"],
+      techStack: ["react.png", "tailwind.png", "nodejs.png", "mysql.png"],
       appImagePath: "/customer",
       appImage: 2,
       typeProject: "Website Application",
