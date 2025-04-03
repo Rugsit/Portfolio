@@ -29,7 +29,7 @@ export default function Home() {
           <p className="text-3xl font-bold mb-6">
             Hi, I&apos;m Rugsit Rungrattanachai 👋
           </p>
-          <p className="text-[16px]">
+          <p className="text-[16px] leading-7">
             A passionate Software Developer with a keen interest in web and
             application development, as well as everything related to software.
             Currently, I&apos;m pursuing my studies in Computer Science at

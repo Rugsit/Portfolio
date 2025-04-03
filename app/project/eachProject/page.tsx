@@ -39,10 +39,10 @@ export default async function EachProject({
             className="rounded-tr-lg rounded-tl-lg"
           />
           <div className="p-7 text-black">
-            <p className="">
+            <p className="leading-7">
               <span className="font-bold">Description:</span> {description}{" "}
             </p>
-            <ul className="list-disc list-inside">
+            <ul className="list-disc list-inside leading-7">
               {subDescription
                 ? subDescription.map((item, index) => {
                     return <li key={index}>{item}</li>;

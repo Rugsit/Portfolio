@@ -18,6 +18,22 @@ export type DataObject = {
 export default function Project() {
   const dataList: DataObject[] = [
     {
+      name: "The Deep Project",
+      github: "https://github.com/Rugsit/The_Deep_Project",
+      thumbnail: "/deep/3.jpg",
+      description:
+        " About TheDeepGame is an educational word-guessing game designed to help students learn English vocabulary while having fun. Players must fill in the correct words to earn points and extend their playtime. However, incorrect answers will result in losing both time and points.",
+      subDescription: [
+        "Frontend: Nuxt.js, Vue.js, Tailwind CSS",
+        "Backend: Node.js, Express.js",
+        "Database: MongoDB",
+      ],
+      techStack: ["vue.png", "tailwind.png", "nodejs.png", "mongo.png"],
+      appImagePath: "/deep",
+      appImage: 4,
+      typeProject: "Website Application",
+    },
+    {
       name: "Pawpocket Project",
       github: "https://github.com/Rugsit/PawPocket",
       thumbnail: "/Pawpocket.jpg",
@@ -91,19 +107,15 @@ export default function Project() {
       typeProject: "Desktop Application",
     },
     {
-      name: "The Deep Project",
-      github: "https://github.com/Rugsit/The_Deep_Project",
-      thumbnail: "/deep/3.jpg",
+      name: "Discord Clone App",
+      github: "https://github.com/Rugsit/Discord-Clone-App",
+      thumbnail: "/discord/1.jpg",
       description:
-        " About TheDeepGame is an educational word-guessing game designed to help students learn English vocabulary while having fun. Players must fill in the correct words to earn points and extend their playtime. However, incorrect answers will result in losing both time and points.",
-      subDescription: [
-        "Frontend: Nuxt.js, Vue.js, Tailwind CSS",
-        "Backend: Node.js, Express.js",
-        "Database: MongoDB",
-      ],
-      techStack: ["vue.png", "tailwind.png", "nodejs.png", "mongo.png"],
-      appImagePath: "/deep",
-      appImage: 4,
+        "This project was created to practice using the React library. Available pages: Main page, Download page, and Discover page. It features a fully responsive web design and utilizes React Router DOM.",
+      subDescription: [""],
+      techStack: ["react.png", "tailwind.png"],
+      appImagePath: "/discord",
+      appImage: 6,
       typeProject: "Website Application",
     },
   ];
