@@ -15,7 +15,7 @@ export default function NavBar() {
               Projects
             </button>
           </Link>
-          <Link href={"cv.pdf"} target="_blank">
+          <Link href={"/resume.pdf"} target="_blank">
             <button className=" transition-transform font-bold px-8 py-2 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 rounded-lg cursor-pointer hover:scale-90 active:opacity-80">
               Resume
             </button>
