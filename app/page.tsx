@@ -15,7 +15,7 @@ export default function Home() {
         className={`w-full flex justify-center items-center flex-col max-w-[600px] mx-auto flex-1 `}
       >
         <div
-          className={`transition-all duration-1000 flex justify-center items-center flex-col mx-11 ${
+          className={`transition-all duration-1000 flex justify-center items-center flex-col mx-11 my-10 ${
             !isFirstShowHome ? "opacity-0 translate-y-16" : ""
           }`}
         >
