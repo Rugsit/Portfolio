@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 
 export type DataObject = {
+  link: string;
   name: string;
   github: string;
   thumbnail: string;
@@ -18,6 +19,7 @@ export type DataObject = {
 export default function Project() {
   const dataList: DataObject[] = [
     {
+      link: "none",
       name: "The Deep Project",
       github: "https://github.com/Rugsit/The_Deep_Project",
       thumbnail: "/deep/3.jpg",
@@ -28,12 +30,13 @@ export default function Project() {
         "Backend: Node.js, Express.js",
         "Database: MongoDB",
       ],
-      techStack: ["vue.png", "tailwind.png", "nodejs.png", "mongo.png"],
+      techStack: ["nuxtjs.png", "tailwind.png", "nodejs.png", "mongo.png"],
       appImagePath: "/deep",
       appImage: 4,
       typeProject: "Website Application",
     },
     {
+      link: "none",
       name: "Pawpocket Project",
       github: "https://github.com/Rugsit/PawPocket",
       thumbnail: "/Pawpocket.jpg",
@@ -50,6 +53,7 @@ export default function Project() {
       typeProject: "Mobile Application",
     },
     {
+      link: "none",
       name: "CNC Recruit Project",
       github: "https://github.com/Rugsit/CNC_Recruit_Frontend",
       thumbnail: "/cnc/1.jpg",
@@ -65,6 +69,7 @@ export default function Project() {
       typeProject: "Website Application",
     },
     {
+      link: "https://lazy-vim-web-clone.vercel.app/",
       name: "LazyVim Web Clone Project",
       github: "https://github.com/Rugsit/Lazy-vim-web-clone",
       thumbnail: "/lazy/1.jpg",
@@ -80,6 +85,7 @@ export default function Project() {
       typeProject: "Website Application",
     },
     {
+      link: "https://customer-management-project.vercel.app/",
       name: "Customer Management Project",
       github: "https://github.com/Rugsit/Customer-Management-Project",
       thumbnail: "/customer/1.jpg",
@@ -95,6 +101,7 @@ export default function Project() {
       typeProject: "Website Application",
     },
     {
+      link: "none",
       name: "MyRequestKU Project",
       github: "https://github.com/Rugsit/MyRequestKU",
       thumbnail: "/myrequest/1.jpg",
@@ -107,6 +114,7 @@ export default function Project() {
       typeProject: "Desktop Application",
     },
     {
+      link: "https://discord-clone-app-slgy.onrender.com",
       name: "Discord Clone App",
       github: "https://github.com/Rugsit/Discord-Clone-App",
       thumbnail: "/discord/1.jpg",
@@ -130,7 +138,7 @@ export default function Project() {
           !isFirstShowHome ? "opacity-0 translate-y-16" : ""
         }`}
       >
-        <p className="text-3xl md:text-4xl lg:text-5xl text-center my-5">
+        <p className="text-3xl md:text-4xl lg:text-5xl text-center mt-16 mb-6 font-bold">
           Projects 👻
         </p>
         <div className="flex flex-wrap px-14 py-7 justify-center gap-3">
@@ -151,22 +159,22 @@ export default function Project() {
                     src={item.thumbnail}
                     className="rounded-tr-lg rounded-tl-lg w-full h-[250px] object-cover"
                   />
-                  <div className="p-3">
+                  <div className="p-3 flex flex-col gap-2">
                     <div className="flex justify-between items-center flex-wrap gap-2">
                       <p className="text-black">{item.name}</p>
-                      <div className="flex gap-2">
-                        {item.techStack.map((techStackItem, techStackIndex) => {
-                          if (techStackIndex == 3) return;
-                          return (
-                            <img
-                              key={techStackIndex}
-                              src={`/logo_tech/${techStackItem}`}
-                              alt="Logo image"
-                              className="h-[25px]"
-                            />
-                          );
-                        })}
-                      </div>
+                    </div>
+                    <div className="flex gap-2">
+                      {item.techStack.map((techStackItem, techStackIndex) => {
+                        if (techStackIndex == 3) return;
+                        return (
+                          <img
+                            key={techStackIndex}
+                            src={`/logo_tech/${techStackItem}`}
+                            alt="Logo image"
+                            className="h-[25px]"
+                          />
+                        );
+                      })}
                     </div>
                     <p
                       className={`py-2 px-4 ${

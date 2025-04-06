@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
-import { Open_Sans } from "next/font/google";
+import { Work_Sans } from "next/font/google";
 import "./globals.css";
 import NavBar from "./component/nav";
 
-const openSans = Open_Sans({
+const workSans = Work_Sans({
   subsets: ["latin"],
 });
 
@@ -20,7 +20,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${openSans.className} antialiased h-screen flex flex-col `}
+        className={`${workSans.className} antialiased h-screen flex flex-col no-scrollbar`}
       >
         <NavBar />
         {children}

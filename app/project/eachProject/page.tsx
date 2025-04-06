@@ -1,5 +1,7 @@
 import Link from "next/link";
 import { DataObject } from "../page";
+import { useState } from "react";
+import AppImage from "@/app/component/AppImage";
 
 export default async function EachProject({
   searchParams,
@@ -7,6 +9,7 @@ export default async function EachProject({
   searchParams: Promise<DataObject>;
 }) {
   const {
+    link,
     name,
     github,
     thumbnail,
@@ -62,18 +65,24 @@ export default async function EachProject({
                 );
               })}
             </div>
+            {link != "none" ? (
+              <div>
+                <p className="font-bold text-2xl mb-2 mt-11">
+                  Demo Application
+                </p>
+                <Link
+                  href={link}
+                  className=" underline text-blue-400 text-[18px]"
+                  target="_blank"
+                >
+                  Click here
+                </Link>
+              </div>
+            ) : (
+              ""
+            )}
             <p className="font-bold text-2xl mb-6 mt-11">Application Image</p>
-            <div className="flex flex-col gap-4">
-              {Array.from({ length: appImage }, (_, index) => {
-                return (
-                  <img
-                    alt="img"
-                    key={index}
-                    src={`${appImagePath}/${index + 1}.jpg`}
-                  />
-                );
-              })}
-            </div>
+            <AppImage appImage={appImage} appImagePath={appImagePath} />
           </div>
         </div>
       </div>
