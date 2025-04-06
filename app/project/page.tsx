@@ -151,7 +151,7 @@ export default function Project() {
                 }}
                 key={index}
               >
-                <div className="max-w-[400px] w-full bg-white rounded-lg cursor-pointer hover:scale-95 transition-transform">
+                <div className="max-w-[400px] w-full dark:bg-white  bg-gray-50 rounded-lg cursor-pointer hover:scale-95 transition-transform">
                   <Image
                     width={1000}
                     height={1000}
@@ -183,7 +183,7 @@ export default function Project() {
                           : item.typeProject == "Desktop Application"
                           ? "bg-purple-400"
                           : "bg-blue-400"
-                      } rounded-lg w-fit text-[12px] mt-2`}
+                      } rounded-lg w-fit text-[12px] text-white mt-2`}
                     >
                       {item.typeProject}
                     </p>

@@ -20,11 +20,11 @@ export default async function EachProject({
   } = await searchParams;
   return (
     <>
-      <div className="w-full max-w-[700px] mx-auto p-6">
+      <div className="w-full max-w-[700px] mx-auto p-6 ">
         <Link href={"/project"}>
           <p className="underline cursor-pointer mb-6"> back to projects</p>
         </Link>
-        <div className="flex items-center mb-9 gap-8">
+        <div className="flex items-center mb-9 gap-8 ">
           <p className="text-3xl ">{name}</p>
           <Link
             className="bg-white rounded-full p-2 hover:scale-95 transition-all"
@@ -34,7 +34,7 @@ export default async function EachProject({
             <img alt="image" src="/logo_tech/github.png" className="w-[51px]" />
           </Link>
         </div>
-        <div className="bg-white rounded-lg flex flex-col mb-8">
+        <div className="rounded-lg flex flex-col mb-8 dark:bg-white bg-gray-100">
           <img
             alt="image"
             src={thumbnail}

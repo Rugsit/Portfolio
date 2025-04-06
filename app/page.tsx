@@ -13,7 +13,7 @@ export default function Home() {
   return (
     <>
       <div
-        className={`w-full flex justify-center items-center flex-col max-w-[600px] mx-auto flex-1 `}
+        className={`w-full flex justify-center items-center flex-col max-w-[600px] mx-auto flex-1  `}
       >
         <div
           className={`transition-all duration-1000 flex justify-center items-center flex-col mx-11 my-20 ${
@@ -39,13 +39,13 @@ export default function Home() {
             Kasetsart University, Bangkhen Campus.
           </p>
           <div className="flex gap-4 items-center mt-4 text-[16px] flex-wrap justify-center">
-            <div className="flex items-center bg-white/45 rounded-lg px-5 py-2 gap-2">
+            <div className="flex items-center dark:bg-white/45 rounded-lg px-5 py-2 gap-2 bg-blue-400">
               <Call width={20} height={20} fill="#ffffff" />
-              <p>081-916-9452</p>
+              <p className="text-white ">081-916-9452</p>
             </div>
-            <div className="flex items-center bg-white/45 rounded-lg px-5 py-2 gap-2">
+            <div className="flex items-center dark:bg-white/45 rounded-lg px-5 py-2 gap-2 bg-blue-400">
               <Mail width={20} height={20} fill="#ffffff" />
-              <p>rugsit.nest@gmail.com</p>
+              <p className="text-white">rugsit.nest@gmail.com</p>
             </div>
             <div className="flex gap-3">
               <Link

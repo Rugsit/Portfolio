@@ -20,7 +20,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${workSans.className} antialiased h-screen flex flex-col no-scrollbar`}
+        className={`${workSans.className} antialiased h-screen flex flex-col no-scrollbar dark:bg-amber-600`}
       >
         <NavBar />
         {children}

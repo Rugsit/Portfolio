@@ -1,10 +1,15 @@
 "use client";
 import Link from "next/link";
-import { Menu } from "./Icon";
+import { Menu, Moon, Sun } from "./Icon";
 import { useState } from "react";
 
 export default function NavBar() {
   const [isNavbarOpen, setIsNavbarOpen] = useState(false);
+  const [isDark, setIsDark] = useState(false);
+  const changeTheme = () => {
+    setIsDark(!isDark);
+    document.body.classList.toggle("dark");
+  };
   return (
     <>
       <div className="flex justify-between p-5 items-center w-full gap-4 relative">
@@ -20,10 +25,32 @@ export default function NavBar() {
             </button>
           </Link>
           <Link href={"/resume.pdf"} target="_blank">
-            <button className=" transition-transform font-bold px-8 py-2 bg-blue-400 rounded-lg cursor-pointer hover:scale-90 active:opacity-80">
+            <button className=" transition-transform font-bold px-8 py-2 bg-blue-400 rounded-lg cursor-pointer hover:scale-90 active:opacity-80 text-white">
               Resume
             </button>
           </Link>
+          <button
+            onClick={() => {
+              changeTheme();
+            }}
+            className="cursor-pointer"
+          >
+            {isDark ? (
+              <Moon
+                width={20}
+                height={20}
+                className=""
+                fill={isDark ? "#ffffff" : "#1f1f1f"}
+              />
+            ) : (
+              <Sun
+                width={20}
+                height={20}
+                className=""
+                fill={isDark ? "#ffffff" : "#1f1f1f"}
+              />
+            )}
+          </button>
         </div>
         <button
           className="block sm:hidden cursor-pointer"
@@ -31,11 +58,16 @@ export default function NavBar() {
             setIsNavbarOpen(!isNavbarOpen);
           }}
         >
-          <Menu width={20} height={20} fill="#ffffff" className="" />
+          <Menu
+            width={20}
+            height={20}
+            className=""
+            fill={isDark ? "#ffffff" : "#1f1f1f"}
+          />
         </button>
         <div
           className={
-            `transition-all absolute backdrop-blur-md left-[20px] right-[20px] -bottom-11 flex justify-center items-center gap-6 bg-white/35 rounded-lg py-2 sm:hidden` +
+            `transition-all absolute backdrop-blur-md left-[20px] right-[20px] -bottom-11 flex justify-center items-center gap-6 bg-gray-200 dark:bg-white/35 rounded-lg py-2 sm:hidden` +
             (!isNavbarOpen ? " opacity-0 pointer-events-none scale-90" : "")
           }
         >
@@ -45,16 +77,31 @@ export default function NavBar() {
             </button>
           </Link>
           <Link href={"/resume.pdf"} target="_blank">
-            <button className=" transition-transform font-bold px-8 py-2 bg-blue-400 rounded-lg cursor-pointer hover:scale-90 active:opacity-80">
+            <button className=" transition-transform font-bold px-8 py-2 bg-blue-400 rounded-lg cursor-pointer hover:scale-90 active:opacity-80 text-white">
               Resume
             </button>
           </Link>
           <button
             onClick={() => {
-              document.body.classList.toggle("dark");
+              changeTheme();
             }}
+            className="cursor-pointer"
           >
-            test
+            {isDark ? (
+              <Moon
+                width={20}
+                height={20}
+                className=""
+                fill={isDark ? "#ffffff" : "#1f1f1f"}
+              />
+            ) : (
+              <Sun
+                width={20}
+                height={20}
+                className=""
+                fill={isDark ? "#ffffff" : "#1f1f1f"}
+              />
+            )}
           </button>
         </div>
       </div>
