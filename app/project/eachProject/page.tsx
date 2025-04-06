@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { DataObject } from "../page";
-import { useState } from "react";
 import AppImage from "@/app/component/AppImage";
 
 export default async function EachProject({

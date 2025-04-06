@@ -82,7 +82,6 @@ export function Mail({
 export function Nuxt({
   width,
   height,
-  fill,
   className,
 }: {
   width: number;
