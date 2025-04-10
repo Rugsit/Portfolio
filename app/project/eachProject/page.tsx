@@ -17,7 +17,20 @@ export default async function EachProject({
     techStack,
     appImage,
     appImagePath,
+  }: {
+    link: string;
+    name: string;
+    github: string;
+    thumbnail: string;
+    description: string;
+    subDescription: string[];
+    techStack: string[];
+    appImage: number;
+    appImagePath: string;
   } = await searchParams;
+  const arraySubDescription: string[] = Array.isArray(subDescription)
+    ? subDescription
+    : [subDescription];
   return (
     <>
       <div className="w-full max-w-[700px] mx-auto p-6 ">
@@ -45,11 +58,13 @@ export default async function EachProject({
               <span className="font-bold">Description:</span> {description}{" "}
             </p>
             <ul className="list-disc list-inside leading-7">
-              {subDescription
+              {Array.isArray(subDescription)
                 ? subDescription.map((item, index) => {
                     return <li key={index}>{item}</li>;
                   })
-                : null}
+                : arraySubDescription.map((item, index) => {
+                    return <li key={index}>{item}</li>;
+                  })}
             </ul>
             <p className="font-bold text-2xl mb-6 mt-6">Tech Stack</p>
             <div className="flex gap-2 flex-wrap">

@@ -126,6 +126,32 @@ export default function Project() {
       appImage: 6,
       typeProject: "Website Application",
     },
+    {
+      link: "https://dashboard-v2-green.vercel.app/",
+      name: "Dashboard V2 Project",
+      github: "https://github.com/Rugsit/Dashboard-V2",
+      thumbnail: "/dashboard_v2/1.jpg",
+      description:
+        "This website simulates the display of a dashboard system and was developed to practice using Rechart, a powerful charting library for React. The primary goal is to create and visualize various types of charts and graphs within a web application. Rechart is a lightweight, open-source library that makes it easy to integrate interactive and aesthetically pleasing charts into React-based applications. Its design emphasizes simplicity and responsiveness, allowing developers to quickly build beautiful, data-driven visualizations with minimal effort. The dashboard simulation includes various types of charts, such as pie charts, line graphs, and bar charts, to display data in an engaging and user-friendly way.",
+      subDescription: ["It supports responsive design."],
+      techStack: ["nextjs.png", "tailwind.png", "recharts.png"],
+      appImagePath: "/dashboard_v2",
+      appImage: 1,
+      typeProject: "Website Application",
+    },
+    {
+      link: "https://dashboard-project-woad.vercel.app/",
+      name: "Dashboard V1 Project",
+      github: "https://github.com/Rugsit/Dashboard-Project",
+      thumbnail: "/dashboard_v1/1.jpg",
+      description:
+        "This is a website that simulates the display of a Dashboard, developed to practice using Rechart or creating charts within a web application. It utilizes the Rechart library, which is a small and visually appealing library for React.",
+      subDescription: ["It supports responsive design."],
+      techStack: ["nextjs.png", "tailwind.png", "recharts.png"],
+      appImagePath: "/dashboard_v1",
+      appImage: 1,
+      typeProject: "Website Application",
+    },
   ];
   const [isFirstShowHome, setIsFirstShowHome] = useState(false);
   useEffect(() => {
@@ -142,7 +168,7 @@ export default function Project() {
           Projects 👻
         </p>
         <div className="flex flex-wrap px-14 py-7 justify-center gap-3">
-          {dataList.map((item, index) => {
+          {dataList.map((item: DataObject, index) => {
             return (
               <Link
                 href={{
