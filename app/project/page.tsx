@@ -20,23 +20,6 @@ export default function Project() {
   const dataList: DataObject[] = [
     {
       link: "none",
-      name: "The Deep Project",
-      github: "https://github.com/Rugsit/The_Deep_Project",
-      thumbnail: "/deep/3.jpg",
-      description:
-        " About TheDeepGame is an educational word-guessing game designed to help students learn English vocabulary while having fun. Players must fill in the correct words to earn points and extend their playtime. However, incorrect answers will result in losing both time and points.",
-      subDescription: [
-        "Frontend: Nuxt.js, Vue.js, Tailwind CSS",
-        "Backend: Node.js, Express.js",
-        "Database: MongoDB",
-      ],
-      techStack: ["nuxtjs.png", "tailwind.png", "nodejs.png", "mongo.png"],
-      appImagePath: "/deep",
-      appImage: 4,
-      typeProject: "Website Application",
-    },
-    {
-      link: "none",
       name: "Pawpocket Project",
       github: "https://github.com/Rugsit/PawPocket",
       thumbnail: "/Pawpocket.jpg",
@@ -66,6 +49,65 @@ export default function Project() {
       techStack: ["nextjs.png", "tailwind.png", "postgres.png"],
       appImagePath: "/cnc",
       appImage: 6,
+      typeProject: "Website Application",
+    },
+    {
+      link: "https://social-media-project-sandy.vercel.app/",
+      name: "Social Media Project",
+      github: "https://github.com/Rugsit/Social-Media-Project.git",
+      thumbnail: "/social_media/1.jpg",
+      description:
+        "This project was created to simulate the development of a social media website, featuring functionalities such as posting, commenting, group creation, and joining groups. The project is developed using React TypeScript, Redux, Tailwind CSS, and Supabase.",
+      subDescription: [
+        "This project was created to practice using Redux Toolkit.",
+        "Supabase is used as the database for data storage and authentication.",
+      ],
+      techStack: ["react.png", "tailwind.png", "supabase.png", "redux.png"],
+      appImagePath: "/social_media",
+      appImage: 4,
+      typeProject: "Website Application",
+    },
+    {
+      link: "https://dashboard-v2-green.vercel.app/",
+      name: "Dashboard V2 Project",
+      github: "https://github.com/Rugsit/Dashboard-V2",
+      thumbnail: "/dashboard_v2/1.jpg",
+      description:
+        "This website simulates the display of a dashboard system and was developed to practice using Rechart, a powerful charting library for React. The primary goal is to create and visualize various types of charts and graphs within a web application. Rechart is a lightweight, open-source library that makes it easy to integrate interactive and aesthetically pleasing charts into React-based applications. Its design emphasizes simplicity and responsiveness, allowing developers to quickly build beautiful, data-driven visualizations with minimal effort. The dashboard simulation includes various types of charts, such as pie charts, line graphs, and bar charts, to display data in an engaging and user-friendly way.",
+      subDescription: ["It supports responsive design."],
+      techStack: ["nextjs.png", "tailwind.png", "recharts.png"],
+      appImagePath: "/dashboard_v2",
+      appImage: 1,
+      typeProject: "Website Application",
+    },
+    {
+      link: "https://dashboard-project-woad.vercel.app/",
+      name: "Dashboard V1 Project",
+      github: "https://github.com/Rugsit/Dashboard-Project",
+      thumbnail: "/dashboard_v1/1.jpg",
+      description:
+        "This is a website that simulates the display of a Dashboard, developed to practice using Rechart or creating charts within a web application. It utilizes the Rechart library, which is a small and visually appealing library for React.",
+      subDescription: ["It supports responsive design."],
+      techStack: ["nextjs.png", "tailwind.png", "recharts.png"],
+      appImagePath: "/dashboard_v1",
+      appImage: 1,
+      typeProject: "Website Application",
+    },
+    {
+      link: "none",
+      name: "The Deep Project",
+      github: "https://github.com/Rugsit/The_Deep_Project",
+      thumbnail: "/deep/3.jpg",
+      description:
+        " About TheDeepGame is an educational word-guessing game designed to help students learn English vocabulary while having fun. Players must fill in the correct words to earn points and extend their playtime. However, incorrect answers will result in losing both time and points.",
+      subDescription: [
+        "Frontend: Nuxt.js, Vue.js, Tailwind CSS",
+        "Backend: Node.js, Express.js",
+        "Database: MongoDB",
+      ],
+      techStack: ["nuxtjs.png", "tailwind.png", "nodejs.png", "mongo.png"],
+      appImagePath: "/deep",
+      appImage: 4,
       typeProject: "Website Application",
     },
     {
@@ -124,32 +166,6 @@ export default function Project() {
       techStack: ["react.png", "tailwind.png"],
       appImagePath: "/discord",
       appImage: 6,
-      typeProject: "Website Application",
-    },
-    {
-      link: "https://dashboard-v2-green.vercel.app/",
-      name: "Dashboard V2 Project",
-      github: "https://github.com/Rugsit/Dashboard-V2",
-      thumbnail: "/dashboard_v2/1.jpg",
-      description:
-        "This website simulates the display of a dashboard system and was developed to practice using Rechart, a powerful charting library for React. The primary goal is to create and visualize various types of charts and graphs within a web application. Rechart is a lightweight, open-source library that makes it easy to integrate interactive and aesthetically pleasing charts into React-based applications. Its design emphasizes simplicity and responsiveness, allowing developers to quickly build beautiful, data-driven visualizations with minimal effort. The dashboard simulation includes various types of charts, such as pie charts, line graphs, and bar charts, to display data in an engaging and user-friendly way.",
-      subDescription: ["It supports responsive design."],
-      techStack: ["nextjs.png", "tailwind.png", "recharts.png"],
-      appImagePath: "/dashboard_v2",
-      appImage: 1,
-      typeProject: "Website Application",
-    },
-    {
-      link: "https://dashboard-project-woad.vercel.app/",
-      name: "Dashboard V1 Project",
-      github: "https://github.com/Rugsit/Dashboard-Project",
-      thumbnail: "/dashboard_v1/1.jpg",
-      description:
-        "This is a website that simulates the display of a Dashboard, developed to practice using Rechart or creating charts within a web application. It utilizes the Rechart library, which is a small and visually appealing library for React.",
-      subDescription: ["It supports responsive design."],
-      techStack: ["nextjs.png", "tailwind.png", "recharts.png"],
-      appImagePath: "/dashboard_v1",
-      appImage: 1,
       typeProject: "Website Application",
     },
   ];
