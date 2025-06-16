@@ -20,6 +20,21 @@ export default function Project() {
   const dataList: DataObject[] = [
     {
       link: "none",
+      name: "Food Delivery App Project",
+      github: "https://github.com/Rugsit/Food-Delivery-App.git",
+      thumbnail: "/food_delivery/1.jpg",
+      description:
+        "This project aims to improve Flutter skills by implementing UI, managing state with Flutter BLoC, and following clean architecture.",
+      subDescription: [
+        "This project was developed using the Flutter framework to implement the UI, Flutter BLoC for state management, and follows the Clean Architecture pattern"
+      ],
+      techStack: ["flutter.png", "supabase.png", "flutter_bloc.png"],
+      appImagePath: "/food_delivery",
+      appImage: 6,
+      typeProject: "Mobile Application",
+    },
+    {
+      link: "none",
       name: "Pawpocket Project",
       github: "https://github.com/Rugsit/PawPocket",
       thumbnail: "/Pawpocket.jpg",
@@ -176,9 +191,8 @@ export default function Project() {
   return (
     <>
       <div
-        className={`transition-all duration-1000 w-full ${
-          !isFirstShowHome ? "opacity-0 translate-y-16" : ""
-        }`}
+        className={`transition-all duration-1000 w-full ${!isFirstShowHome ? "opacity-0 translate-y-16" : ""
+          }`}
       >
         <p className="text-3xl md:text-4xl lg:text-5xl text-center mt-16 mb-6 font-bold">
           Projects 👻
@@ -219,13 +233,12 @@ export default function Project() {
                       })}
                     </div>
                     <p
-                      className={`py-2 px-4 ${
-                        item.typeProject == "Website Application"
-                          ? "bg-indigo-400"
-                          : item.typeProject == "Desktop Application"
+                      className={`py-2 px-4 ${item.typeProject == "Website Application"
+                        ? "bg-indigo-400"
+                        : item.typeProject == "Desktop Application"
                           ? "bg-purple-400"
                           : "bg-blue-400"
-                      } rounded-lg w-fit text-[12px] text-white mt-2`}
+                        } rounded-lg w-fit text-[12px] text-white mt-2`}
                     >
                       {item.typeProject}
                     </p>
