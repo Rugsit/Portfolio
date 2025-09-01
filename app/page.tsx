@@ -16,9 +16,8 @@ export default function Home() {
         className={`w-full flex justify-center items-center flex-col max-w-[600px] mx-auto flex-1  `}
       >
         <div
-          className={`transition-all duration-1000 flex justify-center items-center flex-col mx-11 my-20 ${
-            !isFirstShowHome ? "opacity-0 translate-y-16" : ""
-          }`}
+          className={`transition-all duration-1000 flex justify-center items-center flex-col mx-11 my-20 ${!isFirstShowHome ? "opacity-0 translate-y-16" : ""
+            }`}
         >
           <Image
             width={300}
@@ -43,9 +42,9 @@ export default function Home() {
               <Call width={20} height={20} fill="#ffffff" />
               <p className="text-white ">081-916-9452</p>
             </div>
-            <div className="flex items-center dark:bg-white/45 rounded-lg px-5 py-2 gap-2 bg-blue-400">
+            <div className="flex items-center dark:bg-white/45 rounded-lg px-2 py-2 gap-2 bg-blue-400">
               <Mail width={20} height={20} fill="#ffffff" />
-              <p className="text-white">rugsit.nest@gmail.com</p>
+              <p className="text-white">rugsit.rungrattanachai@gmail.com</p>
             </div>
             <div className="flex gap-3">
               <Link
