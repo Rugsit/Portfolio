@@ -20,6 +20,36 @@ export default function Project() {
   const dataList: DataObject[] = [
     {
       link: "none",
+      name: "Laboratory Equipment Management System",
+      github: "https://github.com/Rugsit/Laboratory-Equipment-Management-System-Frontend.git",
+      thumbnail: "/lems/1.jpg",
+      description:
+        "A laboratory equipment management system featuring equipment borrowing/returning, maintenance requests, and request tracking. The system resolves common issues such as lost equipment due to untracked borrowing and duplicate maintenance reports that caused confusion among lab staff. Key features include equipment borrowing/returning, inventory management, maintenance reporting, request tracking, and equipment requisition for the lab.",
+      subDescription: [
+        "Tech stack: Next.js (Frontend), Go (Backend), PostgreSQL (Database)"
+      ],
+      techStack: ["nextjs.png", "go.png", "postgres.png"],
+      appImagePath: "/lems",
+      appImage: 6,
+      typeProject: "Web Application",
+    },
+    {
+      link: "none",
+      name: "Transport Management System For Gas",
+      github: "https://github.com/nk-n/TMSG-Transport-Management-System-for-Gas.git",
+      thumbnail: "/tmsg/1.jpg",
+      description:
+        "A gas transportation management application developed for PTG Logistic to address tracking delays and inefficiencies in delivery operations. Key features include driver, vehicle, and delivery location management, task assignment to drivers, real-time order and vehicle tracking, driver compensation calculation, customer billing, and transportation performance reporting.",
+      subDescription: [
+        "Built with Next.js for the frontend, Java Spring Boot for the backend, and MariaDB as the database."
+      ],
+      techStack: ["nextjs.png", "spring.png", "mariadb.png"],
+      appImagePath: "/tmsg",
+      appImage: 7,
+      typeProject: "Web Application",
+    },
+    {
+      link: "none",
       name: "Food Delivery App Project",
       github: "https://github.com/Rugsit/Food-Delivery-App.git",
       thumbnail: "/food_delivery/1.jpg",
